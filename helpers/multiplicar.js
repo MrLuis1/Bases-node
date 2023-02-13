@@ -9,7 +9,7 @@ const table = async(base, listado, hasta) => {
             output += `${colors.red(base)} x ${colors.magenta(i)} = ${colors.green(base*i)}\n`;
             dataFile += `${base} x ${i} = ${base*i}\n`;
         }
-        fs.writeFileSync(fileName, dataFile);
+        fs.writeFileSync(`./out/${fileName}`, dataFile);
         
         if(listado) console.log(output)
 
